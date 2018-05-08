@@ -15,7 +15,36 @@
 		45D956B620A1938800787AE9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D956B120A1938800787AE9 /* main.m */; };
 		45D956B720A1938800787AE9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 45D956B220A1938800787AE9 /* Info.plist */; };
 		45D956BB20A1940100787AE9 /* YKSDNManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D956BA20A1940100787AE9 /* YKSDNManager.m */; };
+		45D956C520A1994D00787AE9 /* YKSDN.h in Headers */ = {isa = PBXBuildFile; fileRef = 45D956C320A1994D00787AE9 /* YKSDN.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		45D956C820A1994D00787AE9 /* YKSDN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45D956C120A1994D00787AE9 /* YKSDN.framework */; };
+		45D956C920A1994D00787AE9 /* YKSDN.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 45D956C120A1994D00787AE9 /* YKSDN.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		45D956CE20A1995C00787AE9 /* YKSDNManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 45D956B920A1940100787AE9 /* YKSDNManager.h */; };
+		45D956CF20A1996100787AE9 /* YKSDNManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D956BA20A1940100787AE9 /* YKSDNManager.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		45D956C620A1994D00787AE9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45D9568A20A1935700787AE9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 45D956C020A1994D00787AE9;
+			remoteInfo = YKSDN;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		45D956CD20A1994D00787AE9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				45D956C920A1994D00787AE9 /* YKSDN.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		45D9569220A1935700787AE9 /* YKSDNDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YKSDNDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -30,10 +59,21 @@
 		45D956B220A1938800787AE9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45D956B920A1940100787AE9 /* YKSDNManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKSDNManager.h; sourceTree = "<group>"; };
 		45D956BA20A1940100787AE9 /* YKSDNManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKSDNManager.m; sourceTree = "<group>"; };
+		45D956C120A1994D00787AE9 /* YKSDN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YKSDN.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		45D956C320A1994D00787AE9 /* YKSDN.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKSDN.h; sourceTree = "<group>"; };
+		45D956C420A1994D00787AE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		45D9568F20A1935700787AE9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45D956C820A1994D00787AE9 /* YKSDN.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45D956BD20A1994D00787AE9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -47,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				45D9569420A1935700787AE9 /* YKSDNDemo */,
+				45D956C220A1994D00787AE9 /* YKSDN */,
 				45D9569320A1935700787AE9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				45D9569220A1935700787AE9 /* YKSDNDemo.app */,
+				45D956C120A1994D00787AE9 /* YKSDN.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -93,7 +135,28 @@
 			path = YKSDN;
 			sourceTree = "<group>";
 		};
+		45D956C220A1994D00787AE9 /* YKSDN */ = {
+			isa = PBXGroup;
+			children = (
+				45D956C320A1994D00787AE9 /* YKSDN.h */,
+				45D956C420A1994D00787AE9 /* Info.plist */,
+			);
+			path = YKSDN;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		45D956BE20A1994D00787AE9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45D956C520A1994D00787AE9 /* YKSDN.h in Headers */,
+				45D956CE20A1995C00787AE9 /* YKSDNManager.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		45D9569120A1935700787AE9 /* YKSDNDemo */ = {
@@ -103,15 +166,35 @@
 				45D9568E20A1935700787AE9 /* Sources */,
 				45D9568F20A1935700787AE9 /* Frameworks */,
 				45D9569020A1935700787AE9 /* Resources */,
+				45D956CD20A1994D00787AE9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				45D956C720A1994D00787AE9 /* PBXTargetDependency */,
 			);
 			name = YKSDNDemo;
 			productName = YKSDNDemo;
 			productReference = 45D9569220A1935700787AE9 /* YKSDNDemo.app */;
 			productType = "com.apple.product-type.application";
+		};
+		45D956C020A1994D00787AE9 /* YKSDN */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45D956CA20A1994D00787AE9 /* Build configuration list for PBXNativeTarget "YKSDN" */;
+			buildPhases = (
+				45D956BC20A1994D00787AE9 /* Sources */,
+				45D956BD20A1994D00787AE9 /* Frameworks */,
+				45D956BE20A1994D00787AE9 /* Headers */,
+				45D956BF20A1994D00787AE9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YKSDN;
+			productName = YKSDN;
+			productReference = 45D956C120A1994D00787AE9 /* YKSDN.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -123,6 +206,10 @@
 				ORGANIZATIONNAME = shuqiong;
 				TargetAttributes = {
 					45D9569120A1935700787AE9 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					45D956C020A1994D00787AE9 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
@@ -142,6 +229,7 @@
 			projectRoot = "";
 			targets = (
 				45D9569120A1935700787AE9 /* YKSDNDemo */,
+				45D956C020A1994D00787AE9 /* YKSDN */,
 			);
 		};
 /* End PBXProject section */
@@ -155,6 +243,13 @@
 				45D956B520A1938800787AE9 /* Main.storyboard in Resources */,
 				45D956B320A1938800787AE9 /* Assets.xcassets in Resources */,
 				45D956B420A1938800787AE9 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45D956BF20A1994D00787AE9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,7 +267,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		45D956BC20A1994D00787AE9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45D956CF20A1996100787AE9 /* YKSDNManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		45D956C720A1994D00787AE9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 45D956C020A1994D00787AE9 /* YKSDN */;
+			targetProxy = 45D956C620A1994D00787AE9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		45D956AD20A1938800787AE9 /* LaunchScreen.storyboard */ = {
@@ -326,6 +437,52 @@
 			};
 			name = Release;
 		};
+		45D956CB20A1994D00787AE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = ZZ8Q2H95F5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = YKSDN/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.shuqiong.YKSDN;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		45D956CC20A1994D00787AE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = ZZ8Q2H95F5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = YKSDN/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.shuqiong.YKSDN;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -343,6 +500,15 @@
 			buildConfigurations = (
 				45D956A920A1935700787AE9 /* Debug */,
 				45D956AA20A1935700787AE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		45D956CA20A1994D00787AE9 /* Build configuration list for PBXNativeTarget "YKSDN" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45D956CB20A1994D00787AE9 /* Debug */,
+				45D956CC20A1994D00787AE9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

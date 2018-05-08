@@ -15,6 +15,9 @@
 @property (nonatomic, copy) NSString *oaUrl;
 @property (nonatomic, copy) NSString *mac;
 
+//delay 如不设置或设值的小于0，则默认为3s
+@property (nonatomic, assign) double delay;
+
 //获取并缓存入口服务器地址
 - (void)fetchAndStoreServerList;
 

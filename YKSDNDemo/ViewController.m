@@ -18,6 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    [YKSDNManager sharedManager].delay = 20;
 }
 
 
@@ -27,7 +29,6 @@
 }
 
 - (IBAction)getOptimalServer:(id)sender {
-    
     [[YKSDNManager sharedManager] getOptimalServer:^(NSDictionary *serverInfo) {
         NSLog(@"optimalServer: %@", serverInfo);
     }];

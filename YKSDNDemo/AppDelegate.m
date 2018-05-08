@@ -19,6 +19,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [[YKSDNManager sharedManager] fetchAndStoreServerList];
+    [YKSDNManager sharedManager].oaUrl = @"http://115.231.110.253:7080/mycrm/callInterface.do";
+    [YKSDNManager sharedManager].mac = @"88:6b:6e:e7:83:4e";
     return YES;
 }
 

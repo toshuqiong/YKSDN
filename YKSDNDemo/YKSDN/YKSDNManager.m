@@ -29,8 +29,6 @@ static NSString * const kServerList = @"k_yk_serverList";
 }
 
 - (void)fetchAndStoreServerList {
-    self.oaUrl = @"http://115.231.110.253:7080/mycrm/callInterface.do";
-    self.mac = @"88:6b:6e:e7:83:4e";
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@?interfaceid=%@&mac=%@", self.oaUrl, @"cs-getServerURL", self.mac]]];
     [[[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (!data) {
@@ -65,6 +63,7 @@ static NSString * const kServerList = @"k_yk_serverList";
     dispatch_queue_t sdnQueue = dispatch_queue_create("com.dlsoft.yksdnqueue", DISPATCH_QUEUE_CONCURRENT);
     dispatch_group_t sdnGroup = dispatch_group_create();
     NSMutableArray *servers = [NSMutableArray array];
+    self.delay = self.delay > 0 ? self.delay : 3000;
     
     [[self serverListWithLevel:level] enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         
@@ -80,8 +79,15 @@ static NSString * const kServerList = @"k_yk_serverList";
                 NSDictionary *result = [NSJSONSerialization JSONObjectWithData:[responseString dataUsingEncoding:NSUTF8StringEncoding] options:0 error:nil];
                 if (result) {
                     NSMutableDictionary *serverItem = [obj mutableCopy];
+                    double cost = [result[tsSdnServer] doubleValue] - [result[tsSdnClient] doubleValue];
                     [serverItem addEntriesFromDictionary:result];
-                    [servers addObject:serverItem];
+                    serverItem[@"cost"] = [@(cost) description];
+                    if (cost < self.delay) {
+                        [servers addObject:serverItem];
+                    }
+//#ifdef DEBUG
+//                    NSLog(@"server: %@", serverItem);
+//#endif
                 }
                 
                 dispatch_group_leave(sdnGroup);
