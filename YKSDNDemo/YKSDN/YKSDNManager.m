@@ -29,6 +29,10 @@ static NSString * const kServerList = @"k_yk_serverList";
 }
 
 - (void)fetchAndStoreServerList {
+    if (!self.oaUrl || !self.mac) {
+        NSLog(@"oaUrl 或 mac 不能为空!");
+        return ;
+    }
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@?interfaceid=%@&mac=%@", self.oaUrl, @"cs-getServerURL", self.mac]]];
     [[[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (!data) {
@@ -59,7 +63,11 @@ static NSString * const kServerList = @"k_yk_serverList";
     }];
 }
 
-- (void)getOptimalServerWithLevel:(NSInteger)level completion:(void (^)(NSDictionary *))completionHandler{
+- (void)getOptimalServerWithLevel:(NSInteger)level completion:(void (^)(NSDictionary *))completionHandler {
+    if (!self.mac) {
+        NSLog(@"mac 不能为空");
+        return ;
+    }
     dispatch_queue_t sdnQueue = dispatch_queue_create("com.dlsoft.yksdnqueue", DISPATCH_QUEUE_CONCURRENT);
     dispatch_group_t sdnGroup = dispatch_group_create();
     NSMutableArray *servers = [NSMutableArray array];
@@ -69,12 +77,15 @@ static NSString * const kServerList = @"k_yk_serverList";
         
         dispatch_group_enter(sdnGroup);
         dispatch_group_async(sdnGroup, sdnQueue, ^{
-            NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@/slh/check.do?svc=checkSdn&mac=%@&tsSdnClient=%f",obj[@"slhurl"], self.mac, [[NSDate new] timeIntervalSince1970]*1000]];
+            NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@/slh/check.do?svc=checkSdn&mac=%@&tsSdnClient=%f", obj[@"slhurl"], self.mac, [[NSDate new] timeIntervalSince1970]*1000]];
             
             NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
             request.timeoutInterval = 2;
             
             [[[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+                if (!data) {
+                    return ;
+                }
                 NSString *responseString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
                 NSDictionary *result = [NSJSONSerialization JSONObjectWithData:[responseString dataUsingEncoding:NSUTF8StringEncoding] options:0 error:nil];
                 if (result) {
@@ -115,6 +126,9 @@ static NSString * const kServerList = @"k_yk_serverList";
     NSString *serverListString = [[NSUserDefaults standardUserDefaults] objectForKey:kServerList];
     NSError *error = nil;
     NSData *data = [serverListString dataUsingEncoding:NSUTF8StringEncoding];
+    if (!data) {
+        return nil;
+    }
     NSDictionary *serverList = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
     if (error) {
         return nil;
