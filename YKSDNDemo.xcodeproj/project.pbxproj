@@ -18,7 +18,7 @@
 		45D956C520A1994D00787AE9 /* YKSDN.h in Headers */ = {isa = PBXBuildFile; fileRef = 45D956C320A1994D00787AE9 /* YKSDN.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		45D956C820A1994D00787AE9 /* YKSDN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45D956C120A1994D00787AE9 /* YKSDN.framework */; };
 		45D956C920A1994D00787AE9 /* YKSDN.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 45D956C120A1994D00787AE9 /* YKSDN.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		45D956CE20A1995C00787AE9 /* YKSDNManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 45D956B920A1940100787AE9 /* YKSDNManager.h */; };
+		45D956CE20A1995C00787AE9 /* YKSDNManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 45D956B920A1940100787AE9 /* YKSDNManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		45D956CF20A1996100787AE9 /* YKSDNManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D956BA20A1940100787AE9 /* YKSDNManager.m */; };
 /* End PBXBuildFile section */
 
