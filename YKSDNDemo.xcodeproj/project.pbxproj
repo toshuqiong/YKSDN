@@ -9,10 +9,12 @@
 /* Begin PBXBuildFile section */
 		45D9569720A1935700787AE9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D9569620A1935700787AE9 /* AppDelegate.m */; };
 		45D9569A20A1935700787AE9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D9569920A1935700787AE9 /* ViewController.m */; };
-		45D9569D20A1935700787AE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45D9569B20A1935700787AE9 /* Main.storyboard */; };
-		45D9569F20A1935700787AE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45D9569E20A1935700787AE9 /* Assets.xcassets */; };
-		45D956A220A1935700787AE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45D956A020A1935700787AE9 /* LaunchScreen.storyboard */; };
-		45D956A520A1935700787AE9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D956A420A1935700787AE9 /* main.m */; };
+		45D956B320A1938800787AE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45D956AC20A1938800787AE9 /* Assets.xcassets */; };
+		45D956B420A1938800787AE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45D956AD20A1938800787AE9 /* LaunchScreen.storyboard */; };
+		45D956B520A1938800787AE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45D956AF20A1938800787AE9 /* Main.storyboard */; };
+		45D956B620A1938800787AE9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D956B120A1938800787AE9 /* main.m */; };
+		45D956B720A1938800787AE9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 45D956B220A1938800787AE9 /* Info.plist */; };
+		45D956BB20A1940100787AE9 /* YKSDNManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D956BA20A1940100787AE9 /* YKSDNManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,11 +23,13 @@
 		45D9569620A1935700787AE9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		45D9569820A1935700787AE9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		45D9569920A1935700787AE9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		45D9569C20A1935700787AE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		45D9569E20A1935700787AE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		45D956A120A1935700787AE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		45D956A320A1935700787AE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		45D956A420A1935700787AE9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		45D956AC20A1938800787AE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		45D956AE20A1938800787AE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		45D956B020A1938800787AE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		45D956B120A1938800787AE9 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		45D956B220A1938800787AE9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45D956B920A1940100787AE9 /* YKSDNManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKSDNManager.h; sourceTree = "<group>"; };
+		45D956BA20A1940100787AE9 /* YKSDNManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKSDNManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,13 +66,31 @@
 				45D9569620A1935700787AE9 /* AppDelegate.m */,
 				45D9569820A1935700787AE9 /* ViewController.h */,
 				45D9569920A1935700787AE9 /* ViewController.m */,
-				45D9569B20A1935700787AE9 /* Main.storyboard */,
-				45D9569E20A1935700787AE9 /* Assets.xcassets */,
-				45D956A020A1935700787AE9 /* LaunchScreen.storyboard */,
-				45D956A320A1935700787AE9 /* Info.plist */,
-				45D956A420A1935700787AE9 /* main.m */,
+				45D956B820A1940100787AE9 /* YKSDN */,
+				45D956AB20A1938800787AE9 /* SupportFiles */,
 			);
 			path = YKSDNDemo;
+			sourceTree = "<group>";
+		};
+		45D956AB20A1938800787AE9 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				45D956AC20A1938800787AE9 /* Assets.xcassets */,
+				45D956AD20A1938800787AE9 /* LaunchScreen.storyboard */,
+				45D956AF20A1938800787AE9 /* Main.storyboard */,
+				45D956B120A1938800787AE9 /* main.m */,
+				45D956B220A1938800787AE9 /* Info.plist */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		45D956B820A1940100787AE9 /* YKSDN */ = {
+			isa = PBXGroup;
+			children = (
+				45D956B920A1940100787AE9 /* YKSDNManager.h */,
+				45D956BA20A1940100787AE9 /* YKSDNManager.m */,
+			);
+			path = YKSDN;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,9 +151,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45D956A220A1935700787AE9 /* LaunchScreen.storyboard in Resources */,
-				45D9569F20A1935700787AE9 /* Assets.xcassets in Resources */,
-				45D9569D20A1935700787AE9 /* Main.storyboard in Resources */,
+				45D956B720A1938800787AE9 /* Info.plist in Resources */,
+				45D956B520A1938800787AE9 /* Main.storyboard in Resources */,
+				45D956B320A1938800787AE9 /* Assets.xcassets in Resources */,
+				45D956B420A1938800787AE9 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,7 +166,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				45D9569A20A1935700787AE9 /* ViewController.m in Sources */,
-				45D956A520A1935700787AE9 /* main.m in Sources */,
+				45D956BB20A1940100787AE9 /* YKSDNManager.m in Sources */,
+				45D956B620A1938800787AE9 /* main.m in Sources */,
 				45D9569720A1935700787AE9 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,20 +175,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		45D9569B20A1935700787AE9 /* Main.storyboard */ = {
+		45D956AD20A1938800787AE9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				45D9569C20A1935700787AE9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		45D956A020A1935700787AE9 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				45D956A120A1935700787AE9 /* Base */,
+				45D956AE20A1938800787AE9 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		45D956AF20A1938800787AE9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				45D956B020A1938800787AE9 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -280,7 +304,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZZ8Q2H95F5;
-				INFOPLIST_FILE = YKSDNDemo/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/YKSDNDemo/SupportFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shuqiong.YKSDNDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -294,7 +318,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZZ8Q2H95F5;
-				INFOPLIST_FILE = YKSDNDemo/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/YKSDNDemo/SupportFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shuqiong.YKSDNDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

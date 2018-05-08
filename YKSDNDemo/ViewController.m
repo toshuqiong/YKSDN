@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "YKSDNManager.h"
 
 @interface ViewController ()
 
@@ -25,5 +26,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)getOptimalServer:(id)sender {
+    
+    [[YKSDNManager sharedManager] getOptimalServer:^(NSDictionary *serverInfo) {
+        NSLog(@"optimalServer: %@", serverInfo);
+    }];
+    
+}
 
 @end
